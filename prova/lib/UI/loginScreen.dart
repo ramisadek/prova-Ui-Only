@@ -9,7 +9,8 @@ class _loginScreenState extends State<loginScreen> {
 
   Color start = const Color(0xFFE6B3CB);
   Color end = const Color(0xFF8A71E5);
-  String img =  "images/asset-1.png";
+  String prove_logo =  "assets/images/asset-1.png";
+  String fb_logo = "assets/images/fb logo.png";
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +26,17 @@ class _loginScreenState extends State<loginScreen> {
             alignment: Alignment.topCenter,
             child: Column(
               children: <Widget>[
-                Image.asset('$img',height: 120.0,width: 120.0,),
+
+                //////////////////////////////////////  Prova Logo \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+                Image.asset('$prove_logo',height: 120.0,width: 120.0,),
+
                 Padding(padding: EdgeInsets.only(top: mediaQuery.padding.top + 20)),
+
+                //////////////////////////////////////  Email TextField  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
                 Container(
-                  width: 300.0,
+                  width: mediaQuery.size.width * 0.83,
                   child: TextFormField(
                     controller: null,
                     decoration: InputDecoration(
@@ -44,10 +52,12 @@ class _loginScreenState extends State<loginScreen> {
                   ),
                 ),
 
-                Padding(padding: EdgeInsets.only(top: mediaQuery.padding.top )),
+                Padding(padding: EdgeInsets.only(top: 25.0 )),
+
+                //////////////////////////////////////  Password TextField  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
                 Container(
-                  width: 300.0,
+                  width: mediaQuery.size.width * 0.83,
                   child: TextFormField(
                     controller: null,
                     decoration: InputDecoration(
@@ -63,7 +73,9 @@ class _loginScreenState extends State<loginScreen> {
                   ),
                 ),
 
-                Padding(padding: EdgeInsets.only(top: mediaQuery.padding.top - 10)),
+                Padding(padding: EdgeInsets.only(top: 20.0 )),
+
+                //////////////////////////////////////  Forogt password Button  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
                 InkWell(
                   child: Text("Forgot password ?",style: TextStyle(color: Colors.black26),),
@@ -72,8 +84,10 @@ class _loginScreenState extends State<loginScreen> {
 
                 Padding(padding: EdgeInsets.only(top: mediaQuery.padding.top - 5)),
 
+                //////////////////////////////////////  Login Button \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
                 Container(
-                  //width: 200,
+                    width: mediaQuery.size.width * 0.83,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
                       gradient: LinearGradient(
@@ -93,10 +107,12 @@ class _loginScreenState extends State<loginScreen> {
                     )
                 ),
 
-                Padding(padding: EdgeInsets.only(top: mediaQuery.padding.top - 5)),
+                Padding(padding: EdgeInsets.only(top: 20.0 )),
+
+                //////////////////////////////////////  Policy And Privacy  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
                 InkWell(
-                  child: Text("Police and privecy",style: TextStyle(decoration: TextDecoration.underline,)),
+                  child: Text("Policy and privacy",style: TextStyle(decoration: TextDecoration.underline,)),
                   onTap: null,
                 ),
 
@@ -106,6 +122,8 @@ class _loginScreenState extends State<loginScreen> {
             ),
           ),
 
+          //////////////////////////////////////   OR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
           Container(
             alignment: Alignment.topLeft,
             child: Column(
@@ -114,14 +132,19 @@ class _loginScreenState extends State<loginScreen> {
                  // alignment: Alignment(1.75, 0.0),
                   children: <Widget>[
 
+                    //////////////////////////////////////  Left UnderLine of OR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
                     Container(
-                      width: 170.0,
-                      padding: EdgeInsets.only(top: 20.0),
+                      margin: EdgeInsets.only(left: mediaQuery.padding.left +26.0,top: mediaQuery.padding.top - 23.0),
+                      width: mediaQuery.size.width * 0.37,
+                      padding: EdgeInsets.only(top: mediaQuery.padding.top - 4.0),
                       decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black26))),
                     ),
 
+                    //////////////////////////////////////  Circle of OR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
                     Container(
-                      margin: EdgeInsets.only(left: 170.0,bottom: 20.0),
+                      margin: EdgeInsets.only(left: mediaQuery.padding.left +160.0,bottom: mediaQuery.padding.bottom +20.0),
                       decoration:
                       BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Colors.black26),),
                       child: Padding(
@@ -129,20 +152,43 @@ class _loginScreenState extends State<loginScreen> {
                           child: Text("Or", style: TextStyle(fontSize: 15.0,color: Colors.black26))),
                     ),
 
+                    //////////////////////////////////////  Right UnderLine of OR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
                     Container(
-                      margin: EdgeInsets.only(left: 210.0,top: 20.0),
-                      width: 160.0,
+                      margin: EdgeInsets.only(left: mediaQuery.padding.left +202.0,top: mediaQuery.padding.top -3),
+                      width: mediaQuery.size.width * 0.36,
                       decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black26))),
                     ),
+
+                    //////////////////////////////////////  FaceBook Login Button  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+                    Container(
+                        margin: EdgeInsets.only(left: mediaQuery.padding.left +30.0,top: mediaQuery.padding.top +55.0),
+                        width: mediaQuery.size.width * 0.85,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            color: Color(0xFF3B5998)
+                        ),
+                        child: MaterialButton(
+                          height: 55.0,
+                          minWidth: 300.0,
+                          textColor: Colors.white,
+                          padding: EdgeInsets.only(left: 30.0),
+                          child: new Text("continue with facebook",),
+                          onPressed: () => {},
+                        )
+                    ),
+
+                    Container(
+                      margin: EdgeInsets.only(left: mediaQuery.padding.left + 80,top: mediaQuery.padding.top + 68.0),
+                      child: Image.asset('$fb_logo',width: 20.0,height: 30.0,),
+                    )
 
                   ],
                 )
               ],
             ),
-          )
-
-
-
+          ),
         ],
       ),
     );
